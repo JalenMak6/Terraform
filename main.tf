@@ -47,6 +47,17 @@ resource "proxmox_vm_qemu" "practisehour" {
         cache = var.disk.cache
         iothread = var.disk.iothread
     }
+    
+    # Use this when you want to ignore network changes during the life of VM
+    # I would use it when you dont want to change the IP of VM 
+    # After you setup everything correctly
+    lifecycle {
+        ignore_changes = [
+        network,
+        ]
+    }
+    
+    
 
     network {
         model = var.network.model
