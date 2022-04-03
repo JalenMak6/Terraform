@@ -9,9 +9,9 @@ terraform {
 
 provider "proxmox" {
     pm_tls_insecure = false
-    pm_api_url = "https://proxmox.jaronity.com/api2/json"
-    pm_api_token_id = "jalen@pam!jalentoken"
-    pm_api_token_secret = "6f97fa01-31f6-4b3a-a637-43dc9b089345"
+    pm_api_url = "https://mywebsite/api2/json"
+    pm_api_token_id = "myself@pam!mytoken"
+    pm_api_token_secret = "mytokensecret"
     pm_log_enable = true
     pm_log_file = "terraform-plugin-proxmox.log"
     pm_debug = true
