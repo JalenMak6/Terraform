@@ -1,13 +1,12 @@
 variable "vminfo" {
-    default = {
-        "Vettel1" = {
+        default = {
             name = "vettel1"
             target_node = "Alonso"
             vmid = "203"
             desc = "My terraform practising time"
             onboot = true
             oncreate = true
-            agent = 1
+            agent = 2
             clone = "ubuntu-2004-cloudinit-template"
             memory = 8192
             socket = 1
@@ -22,14 +21,17 @@ variable "vminfo" {
             ip = "192.168.1.203/24"
             default_gateway = "192.168.1.254"
             bootdisk = "scsi0"
-}
+        }
+
+    }
+  
+
 variable "ssh_private_key1" {
-    defaults = "ssh-rsa Amykey= root@centos-ansible-Grafana-ct"
+    default = "ssh-rsa mykey= jalenmak@jalens-MacBook-Air.local"
 }
 
 variable "ssh_private_key2" {
-    default = "ssh-rsa Amykey= root@centos-ansible-Grafana-ct"
-  
+    default = "ssh-rsa mykey= my@Ansible-grafana-ct"  
 }
 
 variable "network" {
@@ -50,5 +52,3 @@ variable "disk" {
 
     }
 }
-
-            
